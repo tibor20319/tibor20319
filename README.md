@@ -1,5 +1,4 @@
-### Hello there 
-### General Kenobi!
+### Hi my name is Tibor. I am from Austria. Im 19 Years old. 
 <!--
 **tibor20319/tibor20319** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
