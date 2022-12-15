@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animierter Hintergrund</title>
+
+  <style>
+    body {
+      background: url(sterne.png) repeat;
+      animation: star-animation 10s linear infinite;
+      z-index: -1;
+    }
+
+    body, h1, h2, p {
+      color: rgb(30, 255, 0);
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    @keyframes star-animation {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -1000px 1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Animierter Sternehimmel</h1>
+  <h2>Dies ist ein Beispiel für einen animierten Sternehimmel im Hintergrund einer HTML-Seite.</h2>
+  <p>HTML (Hypertext Markup Language) ist eine der ältesten und am weitesten verbreiteten Programmiersprachen im Internet. Es wird verwendet, um Webseiten zu strukturieren und deren Inhalte zu formatieren.</p>
+
+  <h2>Wie HTML funktioniert</h2>
+  <p>HTML-Seiten bestehen aus Text, der mit speziellen HTML-Tags versehen ist. Diese Tags definieren, wie der Text dargestellt und strukturiert werden soll.</p>
+  <ul>
+    <li><a href="https://www.w3.org/TR/html5/">HTML5-Spezifikation</a> - Die offizielle Spezifikation von HTML5, der aktuellen Version von HTML.</li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML-Tutorial</a> - Ein interaktives Tutorial von Mozilla Developer Network, das die Grundlagen von HTML verwendet
+</html>
+    </head>
