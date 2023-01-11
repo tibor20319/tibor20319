@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geschützte Seite</title>
+</head>
+<body>
+  <h1>Geschützte Seite</h1>
+  <p>Diese Seite ist mit einem Passwort geschützt. Bitte geben Sie das Passwort ein, um auf die Seite zuzugreifen.</p>
+
+  <form action="">
+    <label for="password">Passwort:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Zugriff gewähren">
+  </form> 
+
+  <script>
+    // Passwort festlegen (ändern Sie dieses Passwort auf ein von Ihnen gewähltes Passwort)
+    const password = "Trudy";
+
+    // Zählervariable für die Anzahl der fehlgeschlagenen Versuche initialisieren
+    let failedAttempts = 0;
+
+    // Formular abfangen und überprüfen, ob das eingegebene Passwort korrekt ist
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = document.querySelector("input[name='password']");
+      if (input.value === password) {
+        // Wenn das Passwort korrekt ist, leitet der Browser auf die HTML-Seite mit dem animierten Sternehimmel um
+        window.location = "file:///C:/Users/tibor/OneDrive%20-%20Fachschule%20f%C3%BCr%20wirtschaftliche%20Berufe%20der%20CARITAS/Tibor/Desktop/HTML/Fabse.html";
+      } else {
+        // Wenn das Passwort nicht korrekt ist, wird die Zählervariable erhöht
+        failedAttempts++;
+
+        // Wenn der Benutzer keine weiteren Versuche mehr hat, wirdeine Meldung angezeigt, dass der Benutzer keine weiteren Versuche mehr hat, und das Formular deaktiviert
+if (failedAttempts >= 10) {
+alert("Sie haben keine Versuche mehr. Das Formular wurde deaktiviert.");
+form.disabled = true;
+} else {
+// Andernfalls wird eine Fehlermeldung angezeigt und das Eingabefeld wird geleert
+alert("Das eingegebene Passwort ist falsch. Bitte versuchen Sie es erneut.");
+input.value = "";
+}
+}
+});
+</script>
+</body>
+</html>
